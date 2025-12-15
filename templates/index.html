@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Calculator</title>
+</head>
+<body>
+    <h2>Mini Calculator</h2>
+
+    <form method="post">
+        <input type="number" name="num1" placeholder="Number 1" required>
+        <input type="number" name="num2" placeholder="Number 2" required>
+
+        <select name="operation">
+            <option value="add">Add</option>
+            <option value="sub">Subtract</option>
+            <option value="mul">Multiply</option>
+            <option value="div">Divide</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not none %}
+        <h3>Result: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
